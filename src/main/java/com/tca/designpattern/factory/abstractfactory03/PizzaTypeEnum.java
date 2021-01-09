@@ -1,7 +1,12 @@
-package com.tca.designpattern.factory.simple_factory;
+package com.tca.designpattern.factory.abstractfactory03;
 
 import lombok.Getter;
 
+
+/**
+ * @author zhouan
+ * @Date 2021-01
+ */
 @Getter
 public enum PizzaTypeEnum {
 	

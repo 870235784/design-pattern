@@ -1,5 +1,9 @@
-package com.tca.designpattern.factory.simple_factory;
+package com.tca.designpattern.factory.simplefactory01;
 
+/**
+ * @author zhouan
+ * @Date 2021-01
+ */
 public abstract class AbstractPizza implements IPizza{
 	
 	/**

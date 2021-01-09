@@ -1,0 +1,40 @@
+@startuml
+
+interface IPizza {
+String type()
+}
+abstract class AbstractPizza
+interface IOrderPizza {
+    AbstractPizza createPizza(PizzaTypeEnum pizzaType)
+}
+
+class PizzaHutCheesePizza
+class PizzaHutClamPizza
+class LacesarCheesePizza
+class LacesarClamPizza
+class PizzaHutOrderPizza
+class LacesarOrderPizza
+
+IPizza <|.. AbstractPizza
+
+AbstractPizza <|-- PizzaHutCheesePizza
+AbstractPizza <|-- PizzaHutClamPizza
+AbstractPizza <|-- LacesarCheesePizza
+AbstractPizza <|-- LacesarClamPizza
+
+PizzaHutOrderPizza ..> PizzaHutCheesePizza
+PizzaHutOrderPizza ..> PizzaHutClamPizza
+LacesarOrderPizza ..> LacesarCheesePizza
+LacesarOrderPizza ..> LacesarClamPizza
+
+IOrderPizza <|.. PizzaHutOrderPizza
+IOrderPizza <|.. LacesarOrderPizza
+
+
+
+
+
+
+
+@enduml
+

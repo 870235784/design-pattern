@@ -1,6 +1,14 @@
-package com.tca.designpattern.factory.simple_factory;
+package com.tca.designpattern.factory.factorymethod02;
 
-public class CheesePizza extends AbstractPizza{
+
+import lombok.Data;
+
+/**
+ * @author zhouan
+ * @Date 2021-01
+ */
+@Data
+public class LacesarCheesePizza extends AbstractPizza {
 
 	private static final PizzaTypeEnum type = PizzaTypeEnum.CHEESE;
 	

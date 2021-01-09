@@ -4,13 +4,15 @@ interface IPizza {
 String type()
 }
 abstract class AbstractPizza
-IPizza <|-- AbstractPizza
+IPizza <|.. AbstractPizza
 
 class CheesePizza
 class ClamPizza
+class OrderPizza
 
-AbstractPizza <|.. CheesePizza
-AbstractPizza <|.. ClamPizza
+SimplePizzaFactory <. OrderPizza
+AbstractPizza <|-- CheesePizza
+AbstractPizza <|-- ClamPizza
 SimplePizzaFactory ..> PizzaTypeEnum
 SimplePizzaFactory ..> AbstractPizza
 

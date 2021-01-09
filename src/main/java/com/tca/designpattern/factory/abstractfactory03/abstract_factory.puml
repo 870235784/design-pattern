@@ -1,0 +1,44 @@
+@startuml
+
+interface IPizza {
+String type()
+}
+abstract class AbstractPizza
+interface IPizzaFactory {
+    AbstractPizza createPizza(PizzaTypeEnum pizzaType)
+}
+enum PizzaTypeEnum {
+CHEESE
+CLAM
+}
+class PizzaHutCheesePizza
+class PizzaHutClamPizza
+class LacesarCheesePizza
+class LacesarClamPizza
+class PizzaHutFactory
+class LacesarFactory
+class OrderPizza
+
+
+IPizza <|.. AbstractPizza
+IPizzaFactory <. OrderPizza
+AbstractPizza <|-- PizzaHutCheesePizza
+AbstractPizza <|-- PizzaHutClamPizza
+AbstractPizza <|-- LacesarCheesePizza
+AbstractPizza <|-- LacesarClamPizza
+
+IPizzaFactory <|.. PizzaHutFactory
+IPizzaFactory <|.. LacesarFactory
+PizzaHutFactory ..> PizzaHutCheesePizza
+PizzaHutFactory ..> PizzaHutClamPizza
+LacesarFactory ..> LacesarCheesePizza
+LacesarFactory ..> LacesarClamPizza
+
+
+
+
+
+
+
+@enduml
+
