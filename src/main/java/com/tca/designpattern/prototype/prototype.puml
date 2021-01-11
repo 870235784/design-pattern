@@ -1,0 +1,13 @@
+@startuml
+
+class Client
+class Proto {
+String name
+}
+class InnerProto {
+String name
+}
+Proto o.. InnerProto
+Client .> Proto
+
+@enduml
