@@ -7,7 +7,7 @@ String name
 class InnerProto {
 String name
 }
-Proto o.. InnerProto
+Proto o-- InnerProto
 Client .> Proto
 
 @enduml

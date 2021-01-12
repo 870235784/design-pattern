@@ -1,0 +1,22 @@
+@startuml
+
+class House
+abstract class AbstractHouseBuilder {
+    private House house;
+    abstract void buildBase();
+    abstract void buildWall();
+    abstract void buildRoof();
+    House createHouse();
+}
+class CommonHouseBuilder
+class HighHouseBuilder
+class Director
+class Client
+
+Director o-- AbstractHouseBuilder
+AbstractHouseBuilder *-House
+AbstractHouseBuilder <|-- CommonHouseBuilder
+AbstractHouseBuilder <|-- HighHouseBuilder
+Client -> Director
+
+@enduml
