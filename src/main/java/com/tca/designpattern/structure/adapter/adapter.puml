@@ -1,0 +1,25 @@
+@startuml
+
+interface IWorkerAdapter {
+    boolean support(Object obj);
+    void work(Object obj);
+}
+class CookerAdapter
+class ProgrammerAdapter
+class Cooker {
+    void cook();
+}
+class Programmer {
+    void program();
+}
+class Client
+
+IWorkerAdapter <|.. CookerAdapter
+IWorkerAdapter <|.. ProgrammerAdapter
+Cooker <. CookerAdapter
+ProgrammerAdapter .> Programmer
+Client ..> IWorkerAdapter
+Client ..> Cooker
+Client ..> Programmer
+
+@enduml
